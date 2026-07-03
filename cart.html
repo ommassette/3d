@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart – Kundix Beauty Treasure</title>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+  <!-- Main styles -->
+  <link rel="stylesheet" href="./style.css" />
+  <!-- Cart-specific styles -->
+  <link rel="stylesheet" href="./cart.css" />
+</head>
+<body>
+  <!-- Skip Navigation -->
+  <a href="#main-cart" class="skip-link">Skip to cart</a>
+
+  <!-- Navbar (matching main and shop pages) -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="logo">
+      KUNDIX <span>BEAUTY TREASURE</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="./index.html#home" class="nav-item">Home</a></li>
+      <li><a href="./product.html" class="nav-item">Shop</a></li>
+      <li><a href="./index.html#contact" class="nav-item">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-info">
+        <span><i class="bi bi-clock" aria-hidden="true"></i> Open 24 Hours</span>
+      </div>
+      <div class="cart-icon-container" role="button" tabindex="0" aria-label="View cart">
+        <a href="cart.html" class="bi bi-cart3" aria-hidden="true"></a>
+        <span class="cart-badge" id="cart-badge" aria-live="polite">2</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Cart Content -->
+  <main id="main-cart" class="cart-container">
+    <div class="cart-layout">
+      
+      <!-- Cart Items -->
+      <section class="cart-items-section" aria-labelledby="cart-heading">
+        <h2 id="cart-heading">Your Shopping Cart</h2>
+        
+        <div class="cart-table-header" role="row">
+          <span role="columnheader">Product</span>
+          <span role="columnheader">Price</span>
+          <span role="columnheader">Quantity</span>
+          <span role="columnheader">Total</span>
+          <span role="columnheader"></span>
+        </div>
+
+        <div class="cart-items-list" id="cart-items-list">
+          <!-- Item 1 -->
+          <div class="cart-item" data-product-id="1" data-price="4500">
+            <div class="item-product">
+              <div class="item-icon-box sunglasses-bg">
+                <i class="bi bi-sunglasses" aria-hidden="true"></i>
+              </div>
+              <div class="item-details">
+                <h3>Statement Aviator Sunglasses</h3>
+                <span class="item-tag">Luxury Eyewear</span>
+              </div>
+            </div>
+            <div class="item-price" data-base-price="4500">KSh 4,500</div>
+            <div class="item-quantity">
+              <div class="qty-counter">
+                <button class="qty-btn qty-minus" aria-label="Decrease quantity"><i class="bi bi-dash"></i></button>
+                <input type="number" class="qty-input" value="1" min="1" aria-label="Quantity" />
+                <button class="qty-btn qty-plus" aria-label="Increase quantity"><i class="bi bi-plus"></i></button>
+              </div>
+            </div>
+            <div class="item-total">KSh 4,500</div>
+            <button class="remove-item-btn" aria-label="Remove item"><i class="bi bi-trash"></i></button>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="cart-item" data-product-id="2" data-price="2200">
+            <div class="item-product">
+              <div class="item-icon-box lipstick-bg">
+                <i class="bi bi-palette" aria-hidden="true"></i>
+              </div>
+              <div class="item-details">
+                <h3>Signature Matte Lipstick</h3>
+                <span class="item-tag">Vibrant Shades</span>
+              </div>
+            </div>
+            <div class="item-price" data-base-price="2200">KSh 2,200</div>
+            <div class="item-quantity">
+              <div class="qty-counter">
+                <button class="qty-btn qty-minus" aria-label="Decrease quantity"><i class="bi bi-dash"></i></button>
+                <input type="number" class="qty-input" value="2" min="1" aria-label="Quantity" />
+                <button class="qty-btn qty-plus" aria-label="Increase quantity"><i class="bi bi-plus"></i></button>
+              </div>
+            </div>
+            <div class="item-total">KSh 4,400</div>
+            <button class="remove-item-btn" aria-label="Remove item"><i class="bi bi-trash"></i></button>
+          </div>
+        </div>
+
+        <a href="./product.html" class="continue-shopping"><i class="bi bi-arrow-left" aria-hidden="true"></i> Continue Shopping</a>
+      </section>
+
+      <!-- Order Summary & Checkout -->
+      <section class="checkout-summary-section" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Order Summary</h2>
+        
+        <div class="summary-totals" id="summary-totals">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="subtotal">KSh 8,900</span>
+          </div>
+          <div class="summary-row">
+            <span>Delivery (Nairobi)</span>
+            <span>KSh 300</span>
+          </div>
+          <hr>
+          <div class="summary-row total-row">
+            <span>Total</span>
+            <span id="total">KSh 9,200</span>
+          </div>
+        </div>
+
+        <form class="checkout-form" id="checkout-form" novalidate>
+          <h3>Delivery Details</h3>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="John Doe" required aria-required="true" />
+            <div class="error-message" id="name-error">Please enter your full name.</div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number (M-Pesa)</label>
+            <input type="tel" id="phone" placeholder="0700 000 000" required aria-required="true" />
+            <div class="error-message" id="phone-error">Please enter a valid phone number.</div>
+          </div>
+          <div class="form-group">
+            <label for="location">Delivery Location / Apartment</label>
+            <input type="text" id="location" placeholder="e.g. Kilimani, Westlands, CBD" required aria-required="true" />
+            <div class="error-message" id="location-error">Please enter your delivery location.</div>
+          </div>
+
+          <h3>Payment Method</h3>
+          <div class="payment-options" role="radiogroup" aria-label="Payment method">
+            <label class="payment-radio">
+              <input type="radio" name="payment" value="mpesa" checked />
+              <span class="radio-card">
+                <i class="bi bi-phone-fill" aria-hidden="true"></i>
+                M-Pesa On Delivery
+              </span>
+            </label>
+            <label class="payment-radio">
+              <input type="radio" name="payment" value="card" />
+              <span class="radio-card">
+                <i class="bi bi-credit-card-fill" aria-hidden="true"></i>
+                Card / Bank Transfer
+              </span>
+            </label>
+          </div>
+
+          <button type="submit" class="place-order-btn">Confirm & Place Order</button>
+          <div id="order-message" class="order-message"></div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer (matching main) -->
+  <footer id="contact" class="footer-section">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>KUNDIX BEAUTY TREASURE</h3>
+        <p><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Mt View Mall, Waiyaki Way, Nairobi</p>
+        <p><i class="bi bi-clock-fill" aria-hidden="true"></i> Open 24 Hours Every Day</p>
+        <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> +254 700 000 000</p>
+        <p><i class="bi bi-envelope-fill" aria-hidden="true"></i> info@kundixbeauty.com</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8544837580644!2d36.7454228!3d-1.2594454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1b802619ca29%3A0xc34ffc9a87d00be9!2sMountain%20View%20Mall!5e0!3m2!1sen!2ske!4v1719999999999!5m2!1sen!2ske"
+          width="100%"
+          height="280"
+          style="border:0; border-radius: 16px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map to Mt View Mall, Nairobi"
+        ></iframe>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Kundix Beauty Treasure. All rights reserved.</p>
+      <button id="back-to-top" aria-label="Back to top" title="Back to top">
+        <i class="bi bi-chevron-up"></i>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Script for interactivity -->
+  <script>
+    (function() {
+      'use strict';
+
+      // Helper: format currency
+      function formatCurrency(amount) {
+        return 'KSh ' + amount.toLocaleString('en-KE');
+      }
+
+      // Get all cart items
+      const cartItems = document.querySelectorAll('.cart-item');
+      const subtotalSpan = document.getElementById('subtotal');
+      const totalSpan = document.getElementById('total');
+      const deliveryFee = 300;
+
+      // Function to update a single item's total and the overall summary
+      function updateTotals() {
+        let subtotal = 0;
+        cartItems.forEach(item => {
+          const price = parseInt(item.dataset.price, 10);
+          const qtyInput = item.querySelector('.qty-input');
+          let qty = parseInt(qtyInput.value, 10) || 1;
+          if (qty < 1) qty = 1;
+          qtyInput.value = qty;
+          const totalPrice = price * qty;
+          item.querySelector('.item-total').textContent = formatCurrency(totalPrice);
+          subtotal += totalPrice;
+        });
+        const total = subtotal + deliveryFee;
+        subtotalSpan.textContent = formatCurrency(subtotal);
+        totalSpan.textContent = formatCurrency(total);
+        // Update badge count
+        const badge = document.getElementById('cart-badge');
+        if (badge) {
+          const count = cartItems.length;
+          badge.textContent = count;
+        }
+      }
+
+      // Attach events to each item
+      cartItems.forEach(item => {
+        const minusBtn = item.querySelector('.qty-minus');
+        const plusBtn = item.querySelector('.qty-plus');
+        const qtyInput = item.querySelector('.qty-input');
+        const removeBtn = item.querySelector('.remove-item-btn');
+
+        // Increment
+        plusBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          let val = parseInt(qtyInput.value, 10) || 1;
+          val++;
+          qtyInput.value = val;
+          updateTotals();
+        });
+
+        // Decrement
+        minusBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          let val = parseInt(qtyInput.value, 10) || 1;
+          if (val > 1) val--;
+          qtyInput.value = val;
+          updateTotals();
+        });
+
+        // Manual input change
+        qtyInput.addEventListener('change', function() {
+          let val = parseInt(this.value, 10) || 1;
+          if (val < 1) val = 1;
+          this.value = val;
+          updateTotals();
+        });
+
+        // Remove item
+        removeBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (confirm('Remove this item from cart?')) {
+            item.remove();
+            updateTotals();
+            // If cart is empty, show a message
+            if (cartItems.length === 0) {
+              const list = document.getElementById('cart-items-list');
+              list.innerHTML = '<p class="empty-cart-message">Your cart is empty. <a href="./product.html">Start shopping</a></p>';
+            }
+          }
+        });
+      });
+
+      // Initial update
+      updateTotals();
+
+      // Back to top
+      const backBtn = document.getElementById('back-to-top');
+      if (backBtn) {
+        backBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Form validation and submission
+      const form = document.getElementById('checkout-form');
+      const orderMessage = document.getElementById('order-message');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Clear previous errors
+        document.querySelectorAll('.error-message').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('.form-group').forEach(el => el.classList.remove('error'));
+
+        let valid = true;
+        const name = document.getElementById('name');
+        const phone = document.getElementById('phone');
+        const location = document.getElementById('location');
+
+        if (!name.value.trim()) {
+          document.getElementById('name-error').style.display = 'block';
+          name.closest('.form-group').classList.add('error');
+          valid = false;
+        }
+        if (!phone.value.trim() || !/^\d{7,15}$/.test(phone.value.replace(/\s/g, ''))) {
+          document.getElementById('phone-error').style.display = 'block';
+          phone.closest('.form-group').classList.add('error');
+          valid = false;
+        }
+        if (!location.value.trim()) {
+          document.getElementById('location-error').style.display = 'block';
+          location.closest('.form-group').classList.add('error');
+          valid = false;
+        }
+
+        if (valid) {
+          // Simulate order placement
+          orderMessage.textContent = '✓ Order placed successfully! We will contact you shortly.';
+          orderMessage.className = 'order-message success';
+          // Optionally reset form or redirect
+          setTimeout(() => {
+            // Reset form after a moment
+            form.reset();
+            orderMessage.textContent = '';
+            orderMessage.className = 'order-message';
+          }, 5000);
+        } else {
+          orderMessage.textContent = 'Please fix the errors above.';
+          orderMessage.className = 'order-message error';
+        }
+      });
+
+      // Live validation on blur
+      document.querySelectorAll('#checkout-form input[required]').forEach(input => {
+        input.addEventListener('blur', function() {
+          const group = this.closest('.form-group');
+          const errorId = this.id + '-error';
+          const errorEl = document.getElementById(errorId);
+          if (errorEl) {
+            if (!this.value.trim()) {
+              errorEl.style.display = 'block';
+              group.classList.add('error');
+            } else {
+              errorEl.style.display = 'none';
+              group.classList.remove('error');
+            }
+          }
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>
