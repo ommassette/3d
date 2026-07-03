@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop – Kundix Beauty Treasure</title>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+  <!-- Main styles -->
+  <link rel="stylesheet" href="./style.css" />
+  <!-- Shop-specific styles -->
+  <link rel="stylesheet" href="./product.css" />
+</head>
+<body>
+  <!-- Skip Navigation -->
+  <a href="#main-shop" class="skip-link">Skip to products</a>
+
+  <!-- Navbar -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="logo">
+      KUNDIX <span>BEAUTY TREASURE</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="./index.html#home" class="nav-item">Home</a></li>
+      <li><a href="#" class="nav-item active" aria-current="page">Shop</a></li>
+      <li><a href="./index.html#contact" class="nav-item">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-info">
+        <span><i class="bi bi-clock" aria-hidden="true"></i> Open 24 Hours</span>
+      </div>
+      <!-- ✅ Cart link – no JavaScript interference, just a normal link -->
+      <a href="cart.html" class="cart-icon-container" aria-label="View cart">
+        <i class="bi bi-cart3" aria-hidden="true"></i>
+        <span class="cart-badge" id="cart-badge" aria-live="polite">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Shop Content -->
+  <main id="main-shop" class="shop-container">
+    <header class="shop-header">
+      <h1>Our Beauty Treasure Collection</h1>
+      <p>Premium cosmetics, luxury eyewear, and elite skincare – available 24/7.</p>
+    </header>
+
+    <section class="product-grid" aria-label="Product listings">
+      <!-- Product 1 -->
+      <article class="product-card">
+        <div class="product-image-wrapper">
+          <div class="product-placeholder sunglasses-bg">
+            <i class="bi bi-sunglasses" aria-hidden="true"></i>
+          </div>
+          <span class="product-tag client-tag">Luxury Eyewear</span>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Statement Aviator Sunglasses</h3>
+          <p class="product-description">High‑fashion frames built to protect your vision and turn heads from day to night.</p>
+          <div class="product-meta">
+            <span class="product-price">KSh 4,500</span>
+            <button class="add-to-cart-btn" data-product="Aviator Sunglasses" data-price="4500">
+              <i class="bi bi-plus-lg" aria-hidden="true"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="product-card">
+        <div class="product-image-wrapper">
+          <div class="product-placeholder lipstick-bg">
+            <i class="bi bi-palette" aria-hidden="true"></i>
+          </div>
+          <span class="product-tag purple-tag">Vibrant Shades</span>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Signature Matte Lipstick</h3>
+          <p class="product-description">Intense pigmentation meets ultra‑hydration for a flawless all‑day bold look.</p>
+          <div class="product-meta">
+            <span class="product-price">KSh 2,200</span>
+            <button class="add-to-cart-btn" data-product="Matte Lipstick" data-price="2200">
+              <i class="bi bi-plus-lg" aria-hidden="true"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="product-card">
+        <div class="product-image-wrapper">
+          <div class="product-placeholder serum-bg">
+            <i class="bi bi-droplet-half" aria-hidden="true"></i>
+          </div>
+          <span class="product-tag pink-tag">Flawless Skincare</span>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Beauty Serum Treasure</h3>
+          <p class="product-description">Unlock deep cellular hydration with premium, weightless active formulations.</p>
+          <div class="product-meta">
+            <span class="product-price">KSh 5,800</span>
+            <button class="add-to-cart-btn" data-product="Beauty Serum" data-price="5800">
+              <i class="bi bi-plus-lg" aria-hidden="true"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 4 -->
+      <article class="product-card">
+        <div class="product-image-wrapper">
+          <div class="product-placeholder sunglasses-bg">
+            <i class="bi bi-sunglasses" aria-hidden="true"></i>
+          </div>
+          <span class="product-tag client-tag">Luxury Eyewear</span>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Oversized Cat‑Eye Frames</h3>
+          <p class="product-description">Bold protective lenses featuring iconic silhouettes crafted for everyday elegance.</p>
+          <div class="product-meta">
+            <span class="product-price">KSh 5,200</span>
+            <button class="add-to-cart-btn" data-product="Cat-Eye Frames" data-price="5200">
+              <i class="bi bi-plus-lg" aria-hidden="true"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 5 -->
+      <article class="product-card">
+        <div class="product-image-wrapper">
+          <div class="product-placeholder lipstick-bg">
+            <i class="bi bi-palette" aria-hidden="true"></i>
+          </div>
+          <span class="product-tag purple-tag">Vibrant Shades</span>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Hydrating Lip Gloss Elixir</h3>
+          <p class="product-description">Non‑sticky brilliant shine complex enriched with natural moisture‑locking oils.</p>
+          <div class="product-meta">
+            <span class="product-price">KSh 1,800</span>
+            <button class="add-to-cart-btn" data-product="Lip Gloss" data-price="1800">
+              <i class="bi bi-plus-lg" aria-hidden="true"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 6 -->
+      <article class="product-card">
+        <div class="product-image-wrapper">
+          <div class="product-placeholder serum-bg">
+            <i class="bi bi-droplet-half" aria-hidden="true"></i>
+          </div>
+          <span class="product-tag pink-tag">Flawless Skincare</span>
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Overnight Renewal Cream</h3>
+          <p class="product-description">Restorative botanical matrix designed to clarify skin tone and maximise glow.</p>
+          <div class="product-meta">
+            <span class="product-price">KSh 6,500</span>
+            <button class="add-to-cart-btn" data-product="Renewal Cream" data-price="6500">
+              <i class="bi bi-plus-lg" aria-hidden="true"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer-section">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>KUNDIX BEAUTY TREASURE</h3>
+        <p><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Mt View Mall, Waiyaki Way, Nairobi</p>
+        <p><i class="bi bi-clock-fill" aria-hidden="true"></i> Open 24 Hours Every Day</p>
+        <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> +254 700 000 000</p>
+        <p><i class="bi bi-envelope-fill" aria-hidden="true"></i> info@kundixbeauty.com</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8544837580644!2d36.7454228!3d-1.2594454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1b802619ca29%3A0xc34ffc9a87d00be9!2sMountain%20View%20Mall!5e0!3m2!1sen!2ske!4v1719999999999!5m2!1sen!2ske"
+          width="100%"
+          height="280"
+          style="border:0; border-radius: 16px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map to Mt View Mall, Nairobi"
+        ></iframe>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Kundix Beauty Treasure. All rights reserved.</p>
+      <button id="back-to-top" aria-label="Back to top" title="Back to top">
+        <i class="bi bi-chevron-up"></i>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Script for interactivity -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const badge = document.getElementById('cart-badge');
+      let count = 0;
+
+      // Add to cart buttons
+      const buttons = document.querySelectorAll('.add-to-cart-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          count++;
+          badge.textContent = count;
+          // Visual feedback
+          this.style.backgroundColor = '#ff007f';
+          this.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            this.style.backgroundColor = '';
+            this.style.transform = '';
+          }, 200);
+          console.log(`Added ${this.dataset.product || 'item'} to cart`);
+        });
+      });
+
+      // Back to top
+      const backBtn = document.getElementById('back-to-top');
+      if (backBtn) {
+        backBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // ✅ Removed the alert – cart icon now works as a normal link
+      // No extra JavaScript needed – the <a href="cart.html"> does the job.
+    });
+  </script>
+</body>
+</html>
