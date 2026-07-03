@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kundix Beauty Treasure | 24/7 Cosmetics Nairobi</title>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Google Fonts (optional premium feel) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- Skip Navigation for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- 3D Canvas -->
+  <canvas class="webgl" aria-hidden="true"></canvas>
+
+  <!-- Loading Overlay -->
+  <div id="loader" aria-live="polite" aria-label="Loading 3D models">
+    <div class="loader-spinner"></div>
+    <p>Preparing your beauty treasures…</p>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="logo">
+      KUNDIX <span>BEAUTY TREASURE</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-item" aria-current="page">Home</a></li>
+      <li><a href="#sunglasses" class="nav-item">Sunglasses</a></li>
+      <li><a href="#lipstick" class="nav-item">Lipsticks</a></li>
+      <li><a href="#serum" class="nav-item">Serums</a></li>
+      <li><a href="product.html" class="nav-item">Shop All</a></li>
+      <li><a href="#contact" class="nav-item">Contact</a></li>
+    </ul>
+    <div class="nav-info">
+      <span><i class="bi bi-clock"></i> Open 24 Hours</span>
+      <span><i class="bi bi-geo-alt"></i> Mt View Mall, Waiyaki Way</span>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- HERO -->
+    <section id="home" class="section hero" aria-labelledby="hero-title">
+      <div class="content">
+        <span class="tag">Now Open 24/7 Along Waiyaki Way</span>
+        <h1 id="hero-title">Your Daily Radiance, Any Hour.</h1>
+        <p>Explore luxury eyewear, premium makeup, and elite skincare curated at Mt View Mall, Nairobi.</p>
+        <a href="product.html" class="btn dark">Explore Collections</a>
+      </div>
+    </section>
+
+    <!-- SUNGLASSES -->
+    <section id="sunglasses" class="section sunglasses-focus" aria-labelledby="sunglasses-title">
+      <div class="content right">
+        <span class="tag black">Main Collection</span>
+        <h2 id="sunglasses-title">Statement Sunglasses</h2>
+        <p>Protect your vision with high‑fashion frames designed to turn heads from day to night.</p>
+      </div>
+    </section>
+
+    <!-- LIPSTICK -->
+    <section id="lipstick" class="section lipstick-focus" aria-labelledby="lipstick-title">
+      <div class="content dark">
+        <span class="tag purple">Vibrant Shades</span>
+        <h2 id="lipstick-title">Signature Lipsticks</h2>
+        <p>Intense pigmentation meets ultra‑hydration. Find your perfect all‑day bold look.</p>
+      </div>
+    </section>
+
+    <!-- SERUM -->
+    <section id="serum" class="section serum-focus" aria-labelledby="serum-title">
+      <div class="content dark-border">
+        <span class="tag pink">Flawless Skincare</span>
+        <h2 id="serum-title">Beauty Serum Treasures</h2>
+        <p>Unlock deep cellular hydration with premium, weightless active formulations.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="footer-section">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>KUNDIX BEAUTY TREASURE</h3>
+        <p><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Mt View Mall, Waiyaki Way, Nairobi</p>
+        <p><i class="bi bi-clock-fill" aria-hidden="true"></i> Open 24 Hours Every Day</p>
+        <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> +254 700 000 000</p>
+        <p><i class="bi bi-envelope-fill" aria-hidden="true"></i> info@kundixbeauty.com</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8544837580644!2d36.7454228!3d-1.2594454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1b802619ca29%3A0xc34ffc9a87d00be9!2sMountain%20View%20Mall!5e0!3m2!1sen!2ske!4v1719999999999!5m2!1sen!2ske"
+          width="100%"
+          height="280"
+          style="border:0; border-radius: 16px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map to Mt View Mall, Nairobi"
+        ></iframe>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Kundix Beauty Treasure. All rights reserved.</p>
+      <button id="back-to-top" aria-label="Back to top" title="Back to top">
+        <i class="bi bi-chevron-up"></i>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
